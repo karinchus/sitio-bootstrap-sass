@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - TechNova Solutions</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos compilados de Sass -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de navegación fija -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">TechNova</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <!-- Carousel de imágenes destacadas -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/1200/450?random=1" class="d-block w-100" alt="Innovación digital">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Innovación y Tecnología</h5>
+            <p>Soluciones a medida para hacer crecer tu proyecto.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1200/450?random=2" class="d-block w-100" alt="Desarrollo de software">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Desarrollo Ágil y Moderno</h5>
+            <p>Arquitecturas responsivas adaptadas a todos los dispositivos.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1200/450?random=3" class="d-block w-100" alt="Consultoría estratégica">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Consultoría Especializada</h5>
+            <p>Acompañamos cada etapa de tu transformación digital.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Jumbotron para el mensaje principal -->
+    <div class="custom-jumbotron text-center">
+      <h1>Bienvenido a TechNova Solutions</h1>
+      <p class="lead">Desarrollamos experiencias web eficientes, accesibles y con diseño de vanguardia.</p>
+      <hr class="my-4">
+      <p>Descubre cómo nuestros servicios pueden potenciar el rendimiento y la presencia digital de tu organización.</p>
+      <a class="btn btn-primary btn-lg mt-2" href="servicios.html" role="button">Ver nuestros servicios</a>
+    </div>
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">© 2026 TechNova Solutions. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

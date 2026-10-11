@@ -1,0 +1,149 @@
+/* ===================================================
+   1. VARIABLES SASS (Colores, Fuentes y Tamaños)
+   =================================================== */
+$color-primario: #0d6efd;
+$color-secundario: #6c757d;
+$color-oscuro: #212529;
+$color-fondo-suave: #f8f9fa;
+$color-destacado: #0b5ed7;
+
+$fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$tamano-titulo: 2.2rem;
+$tamano-subtitulo: 1.2rem;
+
+/* ===================================================
+   2. HERENCIA / PLACEHOLDER (@extend)
+   =================================================== */
+%tarjeta-base {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===================================================
+   3. ESTILOS GLOBALES Y ANIDACIÓN
+   =================================================== */
+body {
+  font-family: $fuente-principal;
+  color: $color-oscuro;
+  padding-top: 56px; // Espacio compensatorio para el navbar fixed-top
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: lighten($color-primario, 20%) !important;
+    }
+
+    &.active {
+      color: #fff !important;
+      font-weight: 700;
+    }
+  }
+}
+
+/* Jumbotron personalizado (Bootstrap 5) */
+.custom-jumbotron {
+  background-color: $color-fondo-suave;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  border: 1px solid #e9ecef;
+
+  h1 {
+    font-size: $tamano-titulo;
+    font-weight: 700;
+    color: $color-primario;
+  }
+
+  p {
+    font-size: $tamano-subtitulo;
+    color: $color-secundario;
+  }
+}
+
+/* Carrusel */
+.carousel {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+  .carousel-item img {
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+}
+
+/* Tarjetas de Servicios aplicando HERENCIA (%tarjeta-base) y ANIDACIÓN */
+.service-card {
+  @extend %tarjeta-base;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-body {
+    padding: 2rem;
+
+    .card-title {
+      color: $color-primario;
+      font-weight: 600;
+    }
+
+    .card-text {
+      color: $color-secundario;
+    }
+  }
+}
+
+/* Tarjeta y Formulario de Contacto aplicando HERENCIA */
+.contact-card {
+  @extend %tarjeta-base;
+  padding: 2rem;
+  background-color: #fff;
+
+  .form-label {
+    font-weight: 600;
+    color: $color-oscuro;
+  }
+
+  .form-control:focus {
+    border-color: $color-primario;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: $color-oscuro;
+  color: #adb5bd;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}

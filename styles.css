@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* ===================================================
+   1. VARIABLES SASS (Colores, Fuentes y Tamaños)
+   =================================================== */
+/* ===================================================
+   2. HERENCIA / PLACEHOLDER (@extend)
+   =================================================== */
+.contact-card, .service-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===================================================
+   3. ESTILOS GLOBALES Y ANIDACIÓN
+   =================================================== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.navbar .nav-link:hover {
+  color: rgb(114.1639344262, 170.6147540984, 253.8360655738) !important;
+}
+.navbar .nav-link.active {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+/* Jumbotron personalizado (Bootstrap 5) */
+.custom-jumbotron {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  border: 1px solid #e9ecef;
+}
+.custom-jumbotron h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+.custom-jumbotron p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Carrusel */
+.carousel {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.carousel .carousel-item img {
+  height: 420px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Tarjetas de Servicios aplicando HERENCIA (%tarjeta-base) y ANIDACIÓN */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.service-card .card-body {
+  padding: 2rem;
+}
+.service-card .card-body .card-title {
+  color: #0d6efd;
+  font-weight: 600;
+}
+.service-card .card-body .card-text {
+  color: #6c757d;
+}
+
+/* Tarjeta y Formulario de Contacto aplicando HERENCIA */
+.contact-card {
+  padding: 2rem;
+  background-color: #fff;
+}
+.contact-card .form-label {
+  font-weight: 600;
+  color: #212529;
+}
+.contact-card .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: #adb5bd;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=styles.css.map */
